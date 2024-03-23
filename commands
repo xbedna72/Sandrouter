@@ -1,0 +1,5 @@
+parse prefixes: bgpdump ribs/rib.20230811.0000.bz2 | grep PREFIX | python3 address_parser.py -prefix_parser | sort | uniq > base.txt
+parse updates: bgpdump -M ribs_updates/updates.20240226.0100.bz2 | python3 address_parser.py -u > updates.txt
+python3 main.py base.txt updates_extract.txt >> result.txt
+
+rib version: rib.20230811.0000
