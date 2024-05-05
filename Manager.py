@@ -4,31 +4,6 @@ from FIB.FIBModel import FIBModel
 from GeneralObjects import AddressIPv4, AddressIPv6
 from RIB import RIB_Class
 
-"""class Array:
-    def __init__(self):
-        self.array = {}
-    
-    def SavePrefix(self, _addr:AddressIPv4|AddressIPv6):
-        if _addr.mask not in self.array:
-            self.array[_addr.mask] = {}
-        
-        if _addr.readableIP in self.array[_addr.mask]:
-            self.array[_addr.mask][_addr.readableIP] += 1
-            return False
-        else:
-            self.array[_addr.mask][_addr.readableIP] = 1
-            return True
-    
-    def DeletePrefix(self, _addr:AddressIPv4|AddressIPv6):
-        if _addr.mask in self.array:
-            if (_addr.readableIP in self.array[_addr.mask]) == True:
-                self.array[_addr.mask][_addr.readableIP] -= 1
-                if self.array[_addr.mask][_addr.readableIP] == 0:
-                    del self.array[_addr.mask][_addr.readableIP]
-                    return True
-        return False
-"""
-
 def Find(root, _addr: AddressIPv4|AddressIPv6):        
     if root.mask == _addr.mask:
         return (True, root.prefixCounter)
