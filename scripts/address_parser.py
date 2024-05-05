@@ -1,5 +1,4 @@
 import sys
-import re
 
 pattern1 = "."
 pattern2 = ":"
