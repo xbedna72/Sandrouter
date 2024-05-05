@@ -84,7 +84,6 @@ def PutUpdates(_file: str, RIB: RIB_Class, FIB:TreeBitmap|BinaryTrie|FIBModel, u
     file = open(_file, 'r')
     lines = file.readlines()
     iter = 0
-    updates = 0
 
     overallAnalyser.AddStatData(FIB.GetStatistics())
 
@@ -94,7 +93,6 @@ def PutUpdates(_file: str, RIB: RIB_Class, FIB:TreeBitmap|BinaryTrie|FIBModel, u
         line2 = line.split('\n')
         address = line2[0].split(' ')
         addr = None
-        updates+=1
         if _type == "ipv4":
             addr = AddressIPv4(address[1])
         else:
@@ -116,5 +114,4 @@ def PutUpdates(_file: str, RIB: RIB_Class, FIB:TreeBitmap|BinaryTrie|FIBModel, u
 
         if iter == _iter:
             iter = 0
-            print(updates)
             overallAnalyser.AddStatData(FIB.GetStatistics())
