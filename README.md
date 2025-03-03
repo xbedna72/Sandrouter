@@ -25,6 +25,6 @@ SandRouter is an application, developed as a benchmark tool to help evaluate beh
 -  -d, --destination - Path of a folder, where final statistics will be saved.
 -  -t', --type - choices=["ipv4", "ipv6"] - The type of addresses passed in base file and updates file.
 
-Example: ```python3 SandRouter.py -m 0 -b "LACNIC_base.txt" -u "LACNIC_updates.txt" -d "../BT/LACNIC/${collector}"```
+Example: ```python3 SandRouter.py -m 0 -b "LACNIC_base.txt" -u "LACNIC_updates.txt" -d "../BT/LACNIC_statistics/"```
 
 Base file and updates file can be preprocessed by script ```./scripts/SandRouter_preprocessing.sh```. For execution information see help message.
